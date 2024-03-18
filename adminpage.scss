@@ -1,0 +1,252 @@
+
+
+/* ■■■■■■ 기본 세팅 ■■■■■■ */
+body
+{
+  box-sizing: border-box;
+  background-color: rgb(237, 235, 235)
+}
+
+/* ■■■■■■ @확장용 스타일들 ■■■■■■ */
+.basicBox //색깔용 데시보드들
+{
+  width: 300px;
+  height: 130px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin: auto;
+  display: flex;
+}
+
+.whitebox //색깔용 데시보드들 위에 올리는 흰색 데시보드들
+{
+  background-color: white;
+  width: 300px;
+  height: 130px;
+  border-radius: 10px;
+  margin-left: 5px;
+  box-shadow: 3px 3px 3px 3px rgb(209, 209, 209);
+}
+
+.whitebox p // 흰색데시보드들 자식 p
+{
+  margin: 0px;
+  margin-left: 30px;
+  padding-top: 35px;
+}
+
+
+
+
+
+
+/* ■■■■■■ 상단 대시보드 클래스들 ■■■■■■ */
+.dashBoardText
+{
+padding-top: 10px;
+padding-left: 140px;
+// margin: auto;
+
+}
+
+.dashBoardBox {
+  width: 1500px;
+  height: 150px;
+  background-color: #edebeb;
+  display: flex;
+  // margin: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
+.colorBox-Blue
+{
+  @extend .basicBox;
+  background-color: rgb(138, 214, 241);
+  
+}
+
+.colorBox-Green
+{
+  @extend .basicBox;
+  background-color: rgb(57, 211, 106);
+}
+
+.colorBox-Purple
+{
+  @extend .basicBox;
+  background-color: rgb(110, 53, 159);
+}
+
+.colorBox-Orange
+{
+  @extend .basicBox;
+  background-color: rgb(245, 191, 98);
+}
+
+
+
+
+
+
+/* ■■■■■■ 하단 오버뷰 클래스들 (그래프) ■■■■■■ */
+
+.viewBox
+{
+  width: 1700px;
+  height: 800px;
+  // background-color: wheat;
+}
+
+.earningsOverView
+{
+  width: 1000px;
+  height: 60px;
+  background-color: #e6e6e6;
+  margin-left: 140px;
+  margin-top: 50px;
+  // display: flex;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 3px 3px 3px 3px #afafaf;
+  float: left;
+}
+
+.graph001
+{
+  width: 1000px;
+  height: 530px;
+  background-color: rgb(245, 244, 244);
+  box-shadow: 3px 3px 3px 3px #afafaf;
+}
+
+.tasks_shell
+{
+  display: inline-block;
+  margin-left:80px;
+  padding-left: 10px;
+  
+}
+
+.tasks_shell div
+{
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.tasks_ghost{ 
+  width: 300px;
+  height: 40px; 
+  box-shadow: 3px 3px 3px 3px #afafaf;
+            }
+
+.tasks001
+{
+  @extend .tasks_ghost;
+  margin-top: 50px;
+  font-weight: 1000;
+
+  background-color: #e6e6e6; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tasks002
+{
+  @extend .tasks_ghost;
+  background-color: #ffffff; 
+}
+
+.tasks003
+{
+  @extend .tasks_ghost;
+  background-color: #ffffff; 
+}
+
+.tasks004
+{
+  @extend .tasks_ghost;
+  background-color: #ffffff; 
+}
+
+.squarebox-left:hover
+{
+  transform: translateX(-10px);
+}
+
+.squarebox-left
+{
+  width: 180px;
+  height: 100%;
+  background-color: rgb(72, 72, 206);
+  position: fixed;
+  transition: all 1s;
+  transform: translateX(-120px);
+}
+
+.squarebox-left p
+{
+  color: white;
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.squarebox-left img
+{
+  width: 30px; 
+  margin-bottom: 20px;
+  padding-left: 125px;
+  padding-right: 10px;
+  padding-top: 14px;
+  // float: left;
+}
+
+
+.squarebox-top
+{
+  width: 100%;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+}
+
+.inputman
+{
+  margin-top: 20px;
+  width: 200px;
+  height: 40px;
+  margin-left: 80px;  
+  position:absolute;
+  transition: width 1s;
+}
+
+.inputman:focus
+{
+  width: 300px;
+}
+
+.inputman:focus + .submitman
+{
+  transition: all 1s;
+  transform: translateX(100px);
+}
+
+
+.submitman
+{
+  width: 50px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 280px;
+  position:absolute;
+  transition: transfrom 1s ease;
+}
+
+
+
+
+
+
