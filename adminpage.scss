@@ -213,13 +213,10 @@ padding-left: 140px;
   background-color: rgb(255, 255, 255);
 }
 
-.inputman
+.inputman //검색창
 {
-  margin-top: 20px;
   width: 200px;
   height: 40px;
-  margin-left: 80px;  
-  position:absolute;
   transition: width 1s;
 }
 
@@ -228,25 +225,16 @@ padding-left: 140px;
   width: 300px;
 }
 
-.inputman:focus + .submitman
-{
-  transition: all 1s;
-  transform: translateX(100px);
-}
-
-
-.submitman
+.submitman //검색버튼
 {
   width: 50px;
   height: 40px;
-  margin-top: 20px;
-  margin-left: 280px;
-  position:absolute;
-  transition: transfrom 1s ease;
 }
 
-
-
-
-
-
+.inputORsubmit // 검색창과 검색버튼을 담고있는 컨테이너창
+{
+  margin-left: 100px;
+  padding-top: 10px;
+  display: flex; /* flexbox를 사용하여 요소들을 가로로 배치합니다. */
+  position: absolute;
+}
