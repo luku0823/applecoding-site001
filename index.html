@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adminpage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+  </head>
+
+
+  <body>
+
+    <nav class="navbox">
+      <div class="squarebox-top">
+          <div class="inputORsubmit">
+              <input class="inputman" type="search" placeholder="Search">
+              <button class="submitman">검색</button>
+          </div>
+
+          <div class="squarebox-left">
+            <div>
+                <div> <img src="home.png"> </div>
+                <div> <img src="headphone.png"> </div>
+                <div> <img src="flag.png"> </div>
+                <div> <img src="piechart.png"> </div>
+            </div>
+          </div>
+      </div>
+    </nav> 
+
+
+
+
+
+    <div class="dashBoardText">
+      <h1>Dashboard</h1>
+    </div>
+
+    <div class="dashBoardBox">
+
+      <div class="colorBox-Blue">
+        <div class="whitebox">
+          <p>Earnings (Monthly)</p>
+          <p style="font-weight: 1000; font-size: 20px; padding-top: 0px;">$400,000</p>
+        </div>
+          <img style="width: 50px; position: absolute; padding-left: 230px; padding-top: 35px;" src="calendar.png">
+      </div>
+
+      <div class="colorBox-Green">
+        <div class="whitebox">
+          <p>Earnings (Annual)</p>
+          <p style="font-weight: 1000; font-size: 20px; padding-top: 0px;">$800,000</p>
+        </div>
+          <img style="width: 50px; position: absolute; padding-left: 230px; padding-top: 35px;" src="money.png">
+      </div>
+
+      <div class="colorBox-Purple">
+        <div class="whitebox">
+          <p>Tasks</p>
+          <p style="font-weight: 1000; font-size: 20px; padding-top: 0px;">13</p>
+        </div>
+          <img style="width: 50px; position: absolute; padding-left: 230px; padding-top: 35px;" src="checklist.png">
+      </div>
+
+      <div class="colorBox-Orange">
+        <div class="whitebox">
+          <p>Requests</p>
+          <p style="font-weight: 1000; font-size: 20px; padding-top: 0px;">26</p>
+        </div>
+          <img style="width: 50px; position: absolute; padding-left: 230px; padding-top: 35px;" src="chat.png">
+      </div>
+
+    </div> <!-- dashBoardBox 끝-->
+
+
+    <div class="viewBox">
+      <div class="earningsOverView">
+        <h3 style="padding-left: 30px;">Earnings Overview</h3>
+          <div class="graph001">
+            <div><canvas id="myChart"></canvas></div>
+          </div>
+      </div>
+      <div class="tasks_shell">
+        <div class="tasks001">Tasks</div>
+        <div class="tasks002">Borrowed Items</div>
+        <div class="tasks003">Trello requests</div>
+        <div class="tasks004">Marked Comments</div>
+      </div>
+    </div>
+
+  </body>
+
+  <!-- 그래프 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById('myChart');
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+
+</html>
